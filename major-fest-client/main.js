@@ -20,13 +20,12 @@ function Main () {
         console.error('Error fetching data:', error)
       })
   }, [])
-  console.log(data)
 
   return (
     <View>
       {
         data.map((item) => {
-          return <Text key={item._id}>{item.name}</Text>
+          return <Text key={item._id}>Holla{item.name}</Text>
         })
       }
     </View>
