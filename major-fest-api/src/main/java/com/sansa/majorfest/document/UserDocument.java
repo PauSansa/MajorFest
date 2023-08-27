@@ -1,5 +1,6 @@
 package com.sansa.majorfest.document;
 
+import lombok.Builder;
 import lombok.Data;
 import org.springframework.data.mongodb.core.mapping.Document;
 import org.springframework.data.mongodb.core.mapping.MongoId;
@@ -12,18 +13,18 @@ import java.util.Date;
 import java.util.List;
 import java.util.UUID;
 
-@Document
 @Data
+@Builder
+@Document(collection = "users")
 public class UserDocument implements UserDetails {
     @MongoId
     private UUID uuid;
     private String name;
-    private String surname;
     private String username;
     private String email;
     private String password;
     private String location;
-    private Date createdDate;
+    private Date createdAt;
     private Role role;
 
     @Override
