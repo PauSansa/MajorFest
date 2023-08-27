@@ -3,3 +3,4 @@ spring:
     mongodb:
       uuid-representation: standard
 
+

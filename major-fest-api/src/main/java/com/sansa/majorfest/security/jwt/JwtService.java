@@ -15,7 +15,7 @@ import java.util.function.Function;
 
 @Service
 public class JwtService {
-    @Value("${dicegame.jwt.secret}")
+    @Value("${JWT_SECRET}")
     private String SECRET_KEY;
 
     public String generateToken(

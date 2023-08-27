@@ -11,6 +11,7 @@ public class UserToDto implements Function<UserDocument, UserDto> {
     @Override
     public UserDto apply(UserDocument userDocument) {
         return UserDto.builder()
+                .uuid(userDocument.getUuid())
                 .name(userDocument.getName())
                 .email(userDocument.getEmail())
                 .location(userDocument.getLocation())

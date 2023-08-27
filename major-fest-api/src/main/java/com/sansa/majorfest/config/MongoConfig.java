@@ -10,20 +10,9 @@ import org.springframework.data.mongodb.config.AbstractMongoClientConfiguration;
 import com.mongodb.client.MongoClient;
 import com.mongodb.client.MongoClients;
 
-import java.util.Set;
 
 @Configuration
 public class MongoConfig extends AbstractMongoClientConfiguration {
-
-    static {
-        Set<DotenvEntry> dotenvEntries = Dotenv.configure().load().entries();
-        if(dotenvEntries != null) {
-            dotenvEntries.forEach((entry) -> {
-                // Añade cada variable de entorno al entorno del sistema
-                System.setProperty(entry.getKey(),entry.getValue());
-            });
-        }
-    }
 
     @Override
     protected String getDatabaseName() {

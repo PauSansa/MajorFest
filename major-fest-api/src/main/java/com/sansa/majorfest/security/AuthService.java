@@ -13,36 +13,43 @@ import com.sansa.majorfest.document.Role;
 import lombok.RequiredArgsConstructor;
 import org.springframework.security.authentication.AuthenticationManager;
 import org.springframework.security.authentication.UsernamePasswordAuthenticationToken;
-import org.springframework.security.core.userdetails.UserDetails;
-import org.springframework.security.core.userdetails.UserDetailsService;
-import org.springframework.security.core.userdetails.UsernameNotFoundException;
 import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.stereotype.Service;
 
 import java.util.Date;
 import java.util.HashMap;
+import java.util.UUID;
 
 @RequiredArgsConstructor
 @Service
-public class AuthenticationService implements UserDetailsService {
+public class AuthService {
     private final PasswordEncoder passwordEncoder;
     private final UserRepository userRepository;
     private final AuthenticationManager authenticationManager;
     private final JwtService jwtService;
     private final UserToDto userToDto;
 
-    public UserDto createUser(RegisterRequest request){
+    public AuthResponse createUser(RegisterRequest request){
 
         UserDocument user = UserDocument.builder()
+                .uuid(UUID.randomUUID())
                 .name(request.getName())
+                .username(request.getUsername())
+                .email(request.getEmail())
                 .password(passwordEncoder.encode(request.getPassword()))
+                .location(request.getLocation())
                 .createdAt(new Date())
                 .role(Role.USER)
                 .build();
 
         UserDocument savedUser = userRepository.save(user);
+        UserDto userDto = userToDto.apply(savedUser);
 
-        return userToDto.apply(savedUser);
+
+        return AuthResponse.builder()
+                .user(userDto)
+                .token(jwtService.generateToken(savedUser, new HashMap<>()))
+                .build();
     }
 
     public AuthResponse authenthicate(LoginRequest request){
@@ -59,10 +66,5 @@ public class AuthenticationService implements UserDetailsService {
                 .token(token)
                 .build();
 
-    }
-
-    @Override
-    public UserDetails loadUserByUsername(String username) throws UsernameNotFoundException {
-        return userRepository.findByUsername(username);
     }
 }
