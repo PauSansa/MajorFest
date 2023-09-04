@@ -22,7 +22,7 @@ EOD
 
 start_frontend() {
   cd $frontend_dir
-  npx expo start
+  npm run ios
 }
 
 # Función para limpiar y detener los procesos antes de salir
