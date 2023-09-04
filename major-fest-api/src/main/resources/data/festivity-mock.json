@@ -1,8 +1,9 @@
 [
   {
-    "_id": {"$uuid": "6a8d4e2b-9b3c-4e1a-8f7d-1c2b3a0d4e5f"},
-    "name": "Carnaval en la Playa",
-    "description": "Celebremos el carnaval en la arena",
+    "_id": {"$uuid": "ea86771f-93a9-48ca-b70f-ea22c5b30f8c"},
+    "name": "Garrinada",
+    "description": "La Festa mes porca",
+    "location":"Argentona",
     "date": [
       {"$date": "2023-02-20T00:00:00Z"},
       {"$date": "2023-02-21T00:00:00Z"},
@@ -15,123 +16,73 @@
     ],
     "concerts": [
       {
-        "name": "Música Tropical",
+        "name": "Figa Flawas",
         "startTime": {"$date": "2023-02-20T16:00:00Z"},
         "endTime": {"$date": "2023-02-20T20:00:00Z"}
       },
       {
-        "name": "DJ en Vivo",
+        "name": "The Tyets",
         "startTime": {"$date": "2023-02-21T22:00:00Z"},
         "endTime": {"$date": "2023-02-22T02:00:00Z"}
       }
-    ]
+    ],
+    "image": "https://www.elpuntavui.cat/imatges/58/62/alta/780_0008_5862189_362663c383a2ad75c74e7d24670869fe.jpg"
   },
   {
-    "_id": {"$uuid": "2f3e4d5c-1b2a-3d4e-5c6d-7f8e9a0b1c2d"},
-    "name": "Festival de Otoño",
-    "description": "Celebrando la belleza del otoño",
+    "_id": {"$uuid": "6a8d4e2b-9b3c-4e1a-8f7d-1c2b3a0d4e5f"},
+    "name": "Piratas",
+    "description": "Festa major de Premia de Mar",
+    "location":"Premia de Mar",
     "date": [
-      {"$date": "2023-10-10T00:00:00Z"},
-      {"$date": "2023-10-11T00:00:00Z"},
-      {"$date": "2023-10-12T00:00:00Z"}
+      {"$date": "2023-02-20T00:00:00Z"},
+      {"$date": "2023-02-21T00:00:00Z"},
+      {"$date": "2023-02-22T00:00:00Z"}
     ],
     "barItems": [
-      { "name": "Sidra", "value": 4.25 },
-      { "name": "Sopa de Calabaza", "value": 3.75 },
-      { "name": "Pastel de Manzana", "value": 5.50 }
+      { "name": "Cerveza", "value": 2.75 },
+      { "name": "Cóctel", "value": 6.50 },
+      { "name": "Snacks", "value": 3.25 }
     ],
     "concerts": [
       {
-        "name": "Música Folklórica",
-        "startTime": {"$date": "2023-10-10T17:30:00Z"},
-        "endTime": {"$date": "2023-10-10T20:00:00Z"}
+        "name": "Dj Rule",
+        "startTime": {"$date": "2023-02-20T16:00:00Z"},
+        "endTime": {"$date": "2023-02-20T20:00:00Z"}
       },
       {
-        "name": "Noche de Jazz",
-        "startTime": {"$date": "2023-10-11T19:00:00Z"},
-        "endTime": {"$date": "2023-10-11T22:00:00Z"}
+        "name": "Mushka",
+        "startTime": {"$date": "2023-02-21T22:00:00Z"},
+        "endTime": {"$date": "2023-02-22T02:00:00Z"}
       }
-    ]
-  },
-  {
-    "_id": {"$uuid": "9b8a7c6d-5e4f-3a2b-1c0d-9e8f7a6b5c4d"},
-    "name": "Festival de Invierno",
-    "description": "Disfruta del invierno con música y diversión",
+    ],
+    "image": "https://festamajor.pdm.cat/wp-content/uploads/2021/06/festamajor.pdm.cat-foto04-scaled.jpg"
+  },{
+    "_id": {"$uuid": "9a2aafab-e371-4c3d-9c8b-d2f1c50b7043"},
+    "name": "Festa Major de Santvi",
+    "description": "A tope tt",
+    "location":"Sant Viçenç de Montalt",
     "date": [
-      {"$date": "2023-12-15T00:00:00Z"},
-      {"$date": "2023-12-16T00:00:00Z"},
-      {"$date": "2023-12-17T00:00:00Z"}
+      {"$date": "2023-02-20T00:00:00Z"},
+      {"$date": "2023-02-21T00:00:00Z"},
+      {"$date": "2023-02-22T00:00:00Z"}
     ],
     "barItems": [
-      { "name": "Chocolate Caliente", "value": 2.50 },
-      { "name": "Ponche", "value": 4.00 },
-      { "name": "Galletas Navideñas", "value": 1.75 }
+      { "name": "Cerveza", "value": 2.75 },
+      { "name": "Cóctel", "value": 6.50 },
+      { "name": "Snacks", "value": 3.25 }
     ],
     "concerts": [
       {
-        "name": "Villancicos Tradicionales",
-        "startTime": {"$date": "2023-12-15T18:30:00Z"},
-        "endTime": {"$date": "2023-12-15T21:00:00Z"}
+        "name": "Figa Flawas",
+        "startTime": {"$date": "2023-02-20T16:00:00Z"},
+        "endTime": {"$date": "2023-02-20T20:00:00Z"}
       },
       {
-        "name": "Rock Invernal",
-        "startTime": {"$date": "2023-12-16T20:00:00Z"},
-        "endTime": {"$date": "2023-12-16T23:00:00Z"}
+        "name": "The Tyets",
+        "startTime": {"$date": "2023-02-21T22:00:00Z"},
+        "endTime": {"$date": "2023-02-22T02:00:00Z"}
       }
-    ]
-  },
-  {
-    "_id": {"$uuid": "1a2b3c4d-5e6f-7a8b-9c0d-1e2f3a4b5c6d"},
-    "name": "Festival de Primavera",
-    "description": "Celebremos la llegada de la primavera",
-    "date": [
-      {"$date": "2023-04-05T00:00:00Z"},
-      {"$date": "2023-04-06T00:00:00Z"},
-      {"$date": "2023-04-07T00:00:00Z"}
     ],
-    "barItems": [
-      { "name": "Jugo de Frutas", "value": 3.00 },
-      { "name": "Ensalada Fresca", "value": 4.50 },
-      { "name": "Helado de Frutas", "value": 2.25 }
-    ],
-    "concerts": [
-      {
-        "name": "Música Indie",
-        "startTime": {"$date": "2023-04-05T17:00:00Z"},
-        "endTime": {"$date": "2023-04-05T20:00:00Z"}
-      },
-      {
-        "name": "Electrónica al Aire Libre",
-        "startTime": {"$date": "2023-04-06T21:00:00Z"},
-        "endTime": {"$date": "2023-04-06T23:30:00Z"}
-      }
-    ]
-  },
-  {
-    "_id": {"$uuid": "7a6b5c4d-3e2f-1a0b-9c8d-5e4f3a2b1c0d"},
-    "name": "Oktoberfest",
-    "description": "Celebremos la cultura bávara con cerveza y música",
-    "date": [
-      {"$date": "2023-09-25T00:00:00Z"},
-      {"$date": "2023-09-26T00:00:00Z"},
-      {"$date": "2023-09-27T00:00:00Z"}
-    ],
-    "barItems": [
-      { "name": "Cerveza Lager", "value": 4.75 },
-      { "name": "Salchichas Bratwurst", "value": 6.00 },
-      { "name": "Bretzel", "value": 2.50 }
-    ],
-    "concerts": [
-      {
-        "name": "Música Folklórica Bávara",
-        "startTime": {"$date": "2023-09-25T16:30:00Z"},
-        "endTime": {"$date": "2023-09-25T19:00:00Z"}
-      },
-      {
-        "name": "Música Pop Alemana",
-        "startTime": {"$date": "2023-09-26T18:00:00Z"},
-        "endTime": {"$date": "2023-09-26T21:00:00Z"}
-      }
-    ]
+    "image": "https://www.svmontalt.cat/ARXIUS/2022/FESTES/IMATGES/CORREFOC.jpg"
   }
 ]

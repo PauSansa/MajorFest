@@ -17,6 +17,8 @@ public class FestivityDocument {
     @MongoId
     private UUID uuid;
     private String name;
+    private String location;
+    private String image;
     private String description;
     private List<LocalDate> date;
     private List<BarItem> barItems;
