@@ -24,7 +24,6 @@ public class MajorFestApplication {
         } catch (DotenvException e) {
             System.out.println(".env file not found");
         }
-        System.out.println(System.getenv());
 
         SpringApplication.run(MajorFestApplication.class, args);
     }

@@ -23,9 +23,8 @@ jar {
     }
 }
 
-task stage {
-    dependsOn bootRun
-}
+task stage(dependsOn: ['build', 'clean'])
+build.mustRunAfter clean
 
 
 repositories {
