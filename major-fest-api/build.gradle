@@ -23,6 +23,9 @@ jar {
     }
 }
 
+task stage {
+    dependsOn build
+}
 
 
 repositories {
