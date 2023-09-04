@@ -14,7 +14,7 @@ public class MongoConfig extends AbstractMongoClientConfiguration {
 
     @Override
     protected String getDatabaseName() {
-        String dbName = System.getenv("MONGO_DB_DATABASE");
+        String dbName = System.getProperty("MONGO_DB_DATABASE");
         if(dbName == null){
             throw new IllegalStateException("MONGO_DB_DATABASE must be set");
         }
@@ -24,9 +24,9 @@ public class MongoConfig extends AbstractMongoClientConfiguration {
     @Override
     public MongoClient mongoClient() {
 
-        String mongoDbUrl = System.getenv("MONGO_DB_URL");
-        String username = System.getenv("MONGO_DB_USERNAME");
-        String password = System.getenv("MONGO_DB_PASSWORD");
+        String mongoDbUrl = System.getProperty("MONGO_DB_URL");
+        String username = System.getProperty("MONGO_DB_USERNAME");
+        String password = System.getProperty("MONGO_DB_PASSWORD");
 
         if (mongoDbUrl == null || username == null || password == null) {
             throw new IllegalStateException("MONGO_DB_URL, MONGO_DB_USERNAME and MONGO_DB_PASSWORD must be set");
