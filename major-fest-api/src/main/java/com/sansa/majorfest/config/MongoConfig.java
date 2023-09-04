@@ -32,7 +32,7 @@ public class MongoConfig extends AbstractMongoClientConfiguration {
             throw new IllegalStateException("MONGO_DB_URL, MONGO_DB_USERNAME and MONGO_DB_PASSWORD must be set");
         }
 
-        String uri = "mongodb://" + username + ":" + password + "@" + mongoDbUrl;
+        String uri = "mongodb+srv://" + username + ":" + password + "@" + mongoDbUrl;
 
         ConnectionString connectionString = new ConnectionString(uri);
         MongoClientSettings settings = MongoClientSettings.builder()
