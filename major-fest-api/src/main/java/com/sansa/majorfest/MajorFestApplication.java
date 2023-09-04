@@ -1,7 +1,6 @@
 package com.sansa.majorfest;
 
-import io.github.cdimascio.dotenv.Dotenv;
-import io.github.cdimascio.dotenv.DotenvEntry;
+
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
@@ -11,13 +10,6 @@ import java.util.Set;
 public class MajorFestApplication {
 
     public static void main(String[] args) {
-        Set<DotenvEntry> dotenvEntries = Dotenv.configure().load().entries();
-        if(dotenvEntries != null) {
-            dotenvEntries.forEach((entry) -> {
-                // Añade cada variable de entorno al entorno del sistema
-                System.setProperty(entry.getKey(),entry.getValue());
-            });
-        }
         SpringApplication.run(MajorFestApplication.class, args);
     }
 

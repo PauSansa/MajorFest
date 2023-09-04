@@ -2,8 +2,6 @@ package com.sansa.majorfest.config;
 
 import com.mongodb.ConnectionString;
 import com.mongodb.MongoClientSettings;
-import io.github.cdimascio.dotenv.Dotenv;
-import io.github.cdimascio.dotenv.DotenvEntry;
 import org.bson.UuidRepresentation;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.data.mongodb.config.AbstractMongoClientConfiguration;
