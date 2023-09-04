@@ -17,6 +17,12 @@ configurations {
     }
 }
 
+jar {
+    manifest {
+        attributes 'Main-Class': 'com.sansa.majorfest.MajorFestApplication'
+    }
+}
+
 
 
 repositories {
