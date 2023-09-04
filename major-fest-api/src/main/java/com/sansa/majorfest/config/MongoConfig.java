@@ -14,7 +14,7 @@ public class MongoConfig extends AbstractMongoClientConfiguration {
 
     @Override
     protected String getDatabaseName() {
-        String dbName = System.getProperty("MONGO_DB_DATABASE");
+        String dbName = System.getenv("MONGO_DB_DATABASE");
         if(dbName == null){
             throw new IllegalStateException("MONGO_DB_DATABASE must be set");
         }
