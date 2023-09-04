@@ -15,8 +15,7 @@
       "**/*"
     ],
     "ios": {
-      "supportsTablet": true,
-      "bundleIdentifier": "com.sansa.major-fest-client"
+      "supportsTablet": true
     },
     "android": {
       "adaptiveIcon": {
