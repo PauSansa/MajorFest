@@ -39,12 +39,8 @@ trap cleanup SIGINT
 start_backend &
 
 # Esperar un poco para asegurarse de que el backend se haya iniciado
-sleep 3
 
 # Iniciar el frontend
 start_frontend 
 
 cleanup
-
-# Esperar a que ambos procesos terminen
-
